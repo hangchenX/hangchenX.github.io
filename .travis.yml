@@ -27,4 +27,4 @@ branches:
     - blog
 env:
  global:
-   - GH_REF: git@github.com:hangchenX/hangchenX.github.io.git
+   - GH_REF: github.com/hangchenX/hangchenX.github.io.git
