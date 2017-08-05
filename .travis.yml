@@ -10,6 +10,7 @@ install:
 
 script:
   - hexo g
+  - hexo d
 
 after_script:
   - cd ./public
