@@ -1,0 +1,22 @@
+language: node_js
+branches:
+  only:
+  - master
+before_install:
+- npm install -g hexo
+- npm install -g hexo-cli
+before_script:
+- git config --global user.name 'XHC'
+- git config --global user.email 'xhangchen@126.com'
+- sed -i'' "s~git@github.com:<hangchenX>/<hangchenX.github.io>.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/<hangchenX>/<hangchenX.github.io>.git~"
+  _config.yml
+install:
+- npm install
+script:
+- hexo clean
+- hexo generate
+after_success:
+- hexo deploy
+env:
+  global:
+    secure: EK+fyHu++i2Cy6yL7U/BMU1cWEERVlBoLJy3rrNLHDEASivpe15qmIqq777u41+Vx7/sdMQe1uFzFhONyhYkyhJ3jihZOHZQcipprTKRJ/GAuypVs9fyR7V6Wekv9sQKwhUBu0s3i2sUAXspHsqeS6T+U1KRnRUs6XrspGpZLcMHY+3ervDVoy8qI5AgIdNzTq0joV4Wr3rTF5ydH/JvvM88K0f7c4S3Xmlc5to8RpmAhDV7PFpgpEisSb1TTJkR/fxIGrbDJ20gz6EjAdwfbf12IADDTbgH6YjoBcf6HbMadcDJXa4sgb1s9kt1XRRLWuM6XjFZPpTHJBjn9L68c9FWrKcHyRyhvu9OcwkoM9lQxwF4XRXSOcDUXMOqbXyfXUROCev4QaiMqxrEwnVx/rcr6DsT5/A7ahiDhqyrGcelcs81Pjxgn4ygJgyEzLlDrFYaXcanq2T8dW2wGWsCsT6RofOBdfh2fZ8FeMlj6Mlt20TLCjabiDpiUxJ2JoHkDqDtugphT9+FYrSgFQrWEIRB7mynAc6+oxCYSu5B93m9qngAmSXxOaP5tahPloQupT83RhpNBZI7jP4QSCN3G2y7xyegIYwpKe0os/aeumlVv93pXArLmY5iRU80ypAeKmtJ8fO/riV2brTXLvD13/CecWnOJVOaTDyOjIqB6CY=
