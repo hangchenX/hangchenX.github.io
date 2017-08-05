@@ -8,7 +8,7 @@ before_install:
 before_script:
 - git config --global user.name 'xhc'
 - git config --global user.email 'xhangchen@126.com'
-- sed -i'' "s~git@github.com:hangchenX/hangchenX.github.io.git~https://${secure}:x-oauth-basic@github.com/hangchenX/hangchenX.github.io>.git~"
+- sed -i'' "s~git@github.com:hangchenX/hangchenX.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/hangchenX/hangchenX.github.io>.git~"
   _config.yml
 install:
 - npm install
@@ -24,7 +24,7 @@ after_script:
 - git config user.email "xhangchen@126.com"
 - git add .
 - git commit -m "Update docs"
-- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+- git push --force --quiet "https://${REPO_TOKEN}@${GH_REF}" master:master
 env:
   global:
     - GH_REF: git@github.com:hangchenX/hangchenX.github.io.git
