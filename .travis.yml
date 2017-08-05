@@ -13,6 +13,7 @@ script:
   - hexo g
 
 after_script:
+  - hexo d
   - cd ./public
   - git init
   - git config user.name "xhc6"
