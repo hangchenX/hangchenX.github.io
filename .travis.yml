@@ -8,7 +8,7 @@ before_install:
 before_script:
 - git config --global user.name 'xhc'
 - git config --global user.email 'xhangchen@126.com'
-- sed -i'' "s~git@github.com:<hangchenX>/<hangchenX.github.io>.git~https://${secure}:x-oauth-basic@github.com/<hangchenX>/<hangchenX.github.io>.git~"
+- sed -i'' "s~git@github.com:hangchenX/hangchenX.github.io.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/hangchenX/hangchenX.github.io>.git~"
   _config.yml
 install:
 - npm install
@@ -17,6 +17,15 @@ script:
 - hexo generate
 after_success:
 - hexo deploy
+after_script:
+- cd ./public
+- git init
+- git config user.name "hangchenX"
+- git config user.email "xhangchen@126.com"
+- git add .
+- git commit -m "Update docs"
+- git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
 env:
   global:
-    secure: amBMDSIiR45Y58BWyBobmpsJZoilv7pDf81NKy00UmcpIstL1SB7JlxgoE4dG89Mncfd9MK7g/17GLSvIwIJTaeCzYPpubJexB5sQZDWrf/3q01YKXVi8OlV3VZSI6QG53BDPiuH2aE1qjCw/PM/I7SkHRKM8El/Ugo5upbpf/ap39wdou9YJ/UModQc1bw7DOhXXLhFKWZoKhepSX2/bFAeDVbgLZXnruZqoGMJiJHknPmCmSMrOtI9RtbBpp/y+m+ByQNIWaEYU60cSHAjaMMzb12kvPk1tC9Sy+hxgpQGbjG4zy/lFZtUP8whDBST/LMie3tOzaKGMoCuWpqoJEiRYqRhEQj5yOjQt0fuRWZ1FXP0rsuKg6/LF1fxTFMJGf9uC44efqgkucSbZuWob4nfSu59rXPgWNE1EgmVYV1cS1XNIVVEaHaELErPIRKFCEllugna70C1EHn5Y6How3YPIAf2f2vNsTvRRX9LxJGiVbQ/B8+F1KNsVsdURQpaVHQbIhxN9uwv/8HtRPC0QEXp1Jnsg/A1BM638jc/e5h7wW2x2de0X7YXqet5MUmcq2eMkziXjS8Mwr/zPO3zXlU+cLri7Es1R5M1DqBRy3+/8DIt8wAjXUJBCF/zJlhalZBxCeb01hB8Fj+DQUicQcJaAKEQQiqE45aAbC/1M/w=
+    - GH_REF: git@github.com:hangchenX/hangchenX.github.io.git
+    - secure: amBMDSIiR45Y58BWyBobmpsJZoilv7pDf81NKy00UmcpIstL1SB7JlxgoE4dG89Mncfd9MK7g/17GLSvIwIJTaeCzYPpubJexB5sQZDWrf/3q01YKXVi8OlV3VZSI6QG53BDPiuH2aE1qjCw/PM/I7SkHRKM8El/Ugo5upbpf/ap39wdou9YJ/UModQc1bw7DOhXXLhFKWZoKhepSX2/bFAeDVbgLZXnruZqoGMJiJHknPmCmSMrOtI9RtbBpp/y+m+ByQNIWaEYU60cSHAjaMMzb12kvPk1tC9Sy+hxgpQGbjG4zy/lFZtUP8whDBST/LMie3tOzaKGMoCuWpqoJEiRYqRhEQj5yOjQt0fuRWZ1FXP0rsuKg6/LF1fxTFMJGf9uC44efqgkucSbZuWob4nfSu59rXPgWNE1EgmVYV1cS1XNIVVEaHaELErPIRKFCEllugna70C1EHn5Y6How3YPIAf2f2vNsTvRRX9LxJGiVbQ/B8+F1KNsVsdURQpaVHQbIhxN9uwv/8HtRPC0QEXp1Jnsg/A1BM638jc/e5h7wW2x2de0X7YXqet5MUmcq2eMkziXjS8Mwr/zPO3zXlU+cLri7Es1R5M1DqBRy3+/8DIt8wAjXUJBCF/zJlhalZBxCeb01hB8Fj+DQUicQcJaAKEQQiqE45aAbC/1M/w=
