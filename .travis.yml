@@ -6,7 +6,7 @@ before_install:
 - npm install -g hexo
 - npm install -g hexo-cli
 before_script:
-- git config --global user.name 'XHC'
+- git config --global user.name 'xhc'
 - git config --global user.email 'xhangchen@126.com'
 - sed -i'' "s~git@github.com:<hangchenX>/<hangchenX.github.io>.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/<hangchenX>/<hangchenX.github.io>.git~"
   _config.yml
@@ -19,4 +19,4 @@ after_success:
 - hexo deploy
 env:
   global:
-    secure: Gjcg17JtDgyiyWiWuLyJ5EsQJjAS1Zz4cs3syU3PejsmrXK3hGlsLfrQkGQJysH3RPvpXUkFXF9pppIFWsgCposGahxXZjgTcInmBrb26q99urBrz9yz95jDff9fkeoN4lebbNBndxd+8cxBdkx6chCG+rjekH1Z96LNLPOrjhx0ZDEnqZ8SWJDVPppmk5SjbUe1X1x9cZZWE63Z63hrdSmVvW+SzQH0VtB5bs/ZAlt37J+WRgyluX+RDocYvwcpbYfh+FpLHodNLOYrMdFCwxXCQ88kdHFFCfUpJdBjqHgnXHTZLMWZkU81uLPrsTkEn4ssnr02Lormf+jBv3t7CxHavZzPNfPmQfuuSINq4NgW1CNPk0qRTfjmJMoClVPsAIrhydU1tdUv6I7VbxyjEps6HFKHfFOyfKRUsyyn+3Gbbks4Di8ADyRhymWIwrXeqTExohMWuBKoG9xrqRJrg9m7CFSlqN/Se6b4AsoDfgVbKgATEbfXBrcBeJcd0PGDadZIYJLlw7EeAwZ3wz/H2g0sdcCUHGJXdKK7YK/oV/BN0y9n3xxZpwXwY0yPEGVWa+zsUlyHvaB4BCCqeXc1G+tR+VjH9a2GPKvWGbTPo5sgb0f3tiV/dmJkyG7zaJOO3brDAzSLIPF2G3ODWd/3wsxWBmFkrMDU67NLT7q0348=
+    secure: amBMDSIiR45Y58BWyBobmpsJZoilv7pDf81NKy00UmcpIstL1SB7JlxgoE4dG89Mncfd9MK7g/17GLSvIwIJTaeCzYPpubJexB5sQZDWrf/3q01YKXVi8OlV3VZSI6QG53BDPiuH2aE1qjCw/PM/I7SkHRKM8El/Ugo5upbpf/ap39wdou9YJ/UModQc1bw7DOhXXLhFKWZoKhepSX2/bFAeDVbgLZXnruZqoGMJiJHknPmCmSMrOtI9RtbBpp/y+m+ByQNIWaEYU60cSHAjaMMzb12kvPk1tC9Sy+hxgpQGbjG4zy/lFZtUP8whDBST/LMie3tOzaKGMoCuWpqoJEiRYqRhEQj5yOjQt0fuRWZ1FXP0rsuKg6/LF1fxTFMJGf9uC44efqgkucSbZuWob4nfSu59rXPgWNE1EgmVYV1cS1XNIVVEaHaELErPIRKFCEllugna70C1EHn5Y6How3YPIAf2f2vNsTvRRX9LxJGiVbQ/B8+F1KNsVsdURQpaVHQbIhxN9uwv/8HtRPC0QEXp1Jnsg/A1BM638jc/e5h7wW2x2de0X7YXqet5MUmcq2eMkziXjS8Mwr/zPO3zXlU+cLri7Es1R5M1DqBRy3+/8DIt8wAjXUJBCF/zJlhalZBxCeb01hB8Fj+DQUicQcJaAKEQQiqE45aAbC/1M/w=
