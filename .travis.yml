@@ -8,7 +8,8 @@ before_install:
 before_script:
 - git config --global user.name 'XHC'
 - git config --global user.email 'xhangchen@126.com'
-- sed -i'' "s~git@github.com:<hangchenX>/<hangchenX.github.io>.git~https://${secure}:x-oauth-basic@github.com/<hangchenX>/<hangchenX.github.io>.git~" _config.yml
+- sed -i'' "s~git@github.com:<hangchenX>/<hangchenX.github.io>.git~https://${REPO_TOKEN}:x-oauth-basic@github.com/<hangchenX>/<hangchenX.github.io>.git~"
+  _config.yml
 install:
 - npm install
 script:
@@ -18,4 +19,4 @@ after_success:
 - hexo deploy
 env:
   global:
-  - secure: nKuNH0Z6FAMlm4YiCj+XKWFbIk5c7LdZWHGwegrhd8EYzkYTiwbd/wUrWy9zJX+SGJ5fYnbVrs8KPmg/3RgmfxctUT//elUdDiqQ6tTyJVKTcPcIE9Xh/Swrp469I/7swPn2UL5nX67N3fk6Y1RxA/9qGNVmxCmmymj37uE1h07jjSt1OGPsEzTAgSwtUMx10qLG72XKlOjrWLjmtl1t8v2E3ZHCucu/9tRDkFGqeMbzxA7CQL6waxgipx+XBpddMk962Y4liMS4OXsWTwZnb1oiCf4B5DDHXSk1DREDwhX9OBeIas4eJhRiYW/V+mTYb9cLizxGIo9EohyDk3ua0vwt1bRabiyYsNikduhXPbzEGOQ1WKIaHofJ6StWo6FC1qFQlyudYx+kKXTc1q3M/lW4w8xQzz8NTxro1slAZMwSnSaH55UEb9iH5EcJL1WuI8y1tvzwEEy1IXjOUzt+Rf+Xa+Mz25FPttmSUwETuYwJSlCtdxnhwRdLUyc+i9XOs4tneqGTwNppPU/F5PluXNVP3IYZKMAsOmdF8FL6LvqIPSrwOgSBj24k+Bw9RJe2K9YPgLK2nsJNuIfKSDLglYVS/A3Iv6YOz7gyF5ENJatsV+HNEY0UUwyXTX7S/dC5WW6287QMf1q2qQKaf/Nx5Fimt+wmEbJJx8AakDt/XRM=
+    secure: Gjcg17JtDgyiyWiWuLyJ5EsQJjAS1Zz4cs3syU3PejsmrXK3hGlsLfrQkGQJysH3RPvpXUkFXF9pppIFWsgCposGahxXZjgTcInmBrb26q99urBrz9yz95jDff9fkeoN4lebbNBndxd+8cxBdkx6chCG+rjekH1Z96LNLPOrjhx0ZDEnqZ8SWJDVPppmk5SjbUe1X1x9cZZWE63Z63hrdSmVvW+SzQH0VtB5bs/ZAlt37J+WRgyluX+RDocYvwcpbYfh+FpLHodNLOYrMdFCwxXCQ88kdHFFCfUpJdBjqHgnXHTZLMWZkU81uLPrsTkEn4ssnr02Lormf+jBv3t7CxHavZzPNfPmQfuuSINq4NgW1CNPk0qRTfjmJMoClVPsAIrhydU1tdUv6I7VbxyjEps6HFKHfFOyfKRUsyyn+3Gbbks4Di8ADyRhymWIwrXeqTExohMWuBKoG9xrqRJrg9m7CFSlqN/Se6b4AsoDfgVbKgATEbfXBrcBeJcd0PGDadZIYJLlw7EeAwZ3wz/H2g0sdcCUHGJXdKK7YK/oV/BN0y9n3xxZpwXwY0yPEGVWa+zsUlyHvaB4BCCqeXc1G+tR+VjH9a2GPKvWGbTPo5sgb0f3tiV/dmJkyG7zaJOO3brDAzSLIPF2G3ODWd/3wsxWBmFkrMDU67NLT7q0348=
